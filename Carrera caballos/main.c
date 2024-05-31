@@ -9,13 +9,13 @@ const float MAX=4.5;
 void imprimirPista(char pista[][DISTANCIAPISTA], int validos);
 int main()
 {
-
     srand(time(NULL));
     int saldo;
     int caballoElegido;
     double multi1=MIN+(double)rand()/ RAND_MAX*(MAX-MIN);
     double multi2=MIN+(double)rand()/ RAND_MAX*(MAX-MIN);
-    char pista[8][DISTANCIAPISTA];
+    int filas=7;
+    char pista[filas][DISTANCIAPISTA];
     //cargamos la pista
     for(int f=0;f<8;f++)
     {
@@ -25,7 +25,7 @@ int main()
             {
                 pista[f][i]='|';
             }
-            else if((f==0) || (f==6))
+            else if((f==0) || (f==filas-1))
             {
                 pista[f][i]='=';
             }
@@ -71,7 +71,7 @@ int main()
             pista[4][index2]='-';
             pista[4][index2-1]=' ';
         }
-        imprimirPista(pista,8);
+        imprimirPista(pista,filas);
         Sleep(100);
     }
     if(index1==DISTANCIAPISTA-2)
