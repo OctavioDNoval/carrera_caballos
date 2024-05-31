@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1717140298 source:c:\users\odnr2\onedrive\desktop\timba caballos\main.c
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+	<time.h>
+
+1717141210 source:c:\users\odnr2\onedrive\desktop\carrera caballos\main.c
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+	<time.h>
+
