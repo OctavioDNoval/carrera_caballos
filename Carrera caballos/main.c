@@ -3,7 +3,7 @@
 #include <windows.h>
 #include <time.h>
 
-const int DISTANCIAPISTA=50;
+const int DISTANCIAPISTA=40;
 const float MIN=1.0;
 const float MAX=4.5;
 void imprimirPista(char pista[][DISTANCIAPISTA], int validos);
@@ -50,12 +50,11 @@ int main()
     printf("EMPIEZA LA CARRERA");
     int index1=1;//caballo 1
     int index2=1;//caballo 2
-    while((index1!=DISTANCIAPISTA-1) && (index2!=DISTANCIAPISTA-1))
+    while((index1!=DISTANCIAPISTA-2) && (index2!=DISTANCIAPISTA-2))
     {
         system("cls");
         int posibilidades1=rand()%2;
         int posibilidades2=rand()%2;
-        imprimirPista(pista,8);
         if(posibilidades1==1)
         {
             index1++,
@@ -68,9 +67,10 @@ int main()
             pista[4][index2]='-';
             pista[4][index2-1]=' ';
         }
+        imprimirPista(pista,8);
         Sleep(100);
     }
-    if(index1==DISTANCIAPISTA-1)
+    if(index1==DISTANCIAPISTA-2)
     {
         double win=saldo*multi1;
         printf("\n\nCABALLO 1 GANADOR\n\ntu apuesta :%i",saldo);
@@ -83,7 +83,7 @@ int main()
             printf("\nPERDISTE ");
         }
     }
-    if(index2==DISTANCIAPISTA-1)
+    if(index2==DISTANCIAPISTA-2)
     {
         double win=saldo*multi2;
         printf("\n\nCABALLO 2 GANADOR\n\ntu apuesta :%i",saldo);
