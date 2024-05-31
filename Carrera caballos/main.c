@@ -39,8 +39,12 @@ int main()
     //pedimos el ingreso de las apuestas
     printf("ingrese dinero a apostar: ");
     scanf("%i", &saldo);
-    printf("por cual caballo va a apostar\ncaballo 1(el de arriba) %f \ncaballo 2(el de abajo) %f\n",multi1,multi2);
-    scanf("%i", &caballoElegido);
+    do{
+        printf("por cual caballo va a apostar\ncaballo 1(el de arriba) %f \ncaballo 2(el de abajo) %f\n",multi1,multi2);
+        scanf("%i", &caballoElegido);
+        system("cls");
+    }while((caballoElegido!=1)&&(caballoElegido!=2));
+
     printf("Cargando datos");
     for(int i=0;i<3;i++)
     {
